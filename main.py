@@ -1,5 +1,4 @@
 # Veronika Musijaka 221RDB124 13.gr
-import sys
 
 class Query:
     def __init__(self, query):
@@ -10,10 +9,10 @@ class Query:
 
 def read_queries():
     n = int(input())
-    return [Query(sys.stdin.readLine().split()) for i in range(n)]
+    return [Query(input().split()) for i in range(n)]
 
 def write_responses(result):
-    sys.stdout.write('\n'.join(result) + '\n')
+    print('\n'.join(result))
 
 def process_queries(queries):
     result = []
